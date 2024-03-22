@@ -1,7 +1,10 @@
+"use client"
+import { ThemeContext } from "@/themes/ThemeProvider";
 import React from "react";
 
-const page: React.FC = () => {
-  return <div>Home</div>;
-};
+export default function page() {
+  const theme = React.useContext(ThemeContext);
 
-export default page;
+  return <div>{theme?.value}
+  <button onClick={()=>{theme?.changeTheme('DARK')}} >change theme</button></div>;
+}
