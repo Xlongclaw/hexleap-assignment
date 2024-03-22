@@ -1,10 +1,13 @@
-"use client"
+"use client";
+import ComponentShowcase from "@/containers/component-showcase";
 import { ThemeContext } from "@/themes/ThemeProvider";
 import React from "react";
 
 export default function page() {
   const theme = React.useContext(ThemeContext);
-
-  return <div>{theme?.value}
-  <button onClick={()=>{theme?.changeTheme('DARK')}} >change theme</button></div>;
+  return (
+    <main className={theme?.value}>
+      <ComponentShowcase />
+    </main>
+  );
 }

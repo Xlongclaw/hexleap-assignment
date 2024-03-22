@@ -1,4 +1,4 @@
-type ThemeType = "LIGHT" | "DARK";
+type ThemeType = "light" | "dark";
 
 interface IThemeContext {
   value: ThemeType;

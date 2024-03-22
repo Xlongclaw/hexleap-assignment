@@ -21,7 +21,7 @@ export const ThemeContext = React.createContext<IThemeContext | null>(null);
  */
 export default function ThemeProvider({ children }: PropTypes): JSX.Element {
   // State to manage the current theme.
-  const [theme, setTheme] = React.useState<ThemeType>("LIGHT");
+  const [theme, setTheme] = React.useState<ThemeType>("light");
 
   /**
    * Function to change the current theme.
