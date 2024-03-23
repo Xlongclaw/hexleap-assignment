@@ -10,7 +10,7 @@ const poppins = Poppins({ weight: "700", subsets: ["latin"] });
 
 export default function Heading({ title }: PropsType) {
   return (
-    <div className="flex">
+    <div className="flex self-start">
       <h3
         className={`${poppins.className} text-[24px] text-black dark:text-white`}
       >

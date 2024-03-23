@@ -9,9 +9,10 @@ export default function AdvertisementWrapper({
   return (
     <div
       style={{ boxShadow: "0px 4px 8px 0px #0000000D" }}
-      className="p-3 dark:bg-[#3B3E47] dark:text-white"
+      className="p-[10px] dark:bg-[#3B3E47] dark:text-white"
     >
-      <div className="w-full h-full border border-[#006555]/50">
+      <div className="w-full h-full border border-[#006555]/50 relative">
+      <h5 className="absolute right-[-1px] top-[-1px] text-[13px] text-white px-3 py-1 bg-black">Ad</h5>
         <Image
           src={advertisement.image}
           alt="sport"
