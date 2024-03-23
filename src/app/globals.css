@@ -10,5 +10,5 @@
 }
 
 *{
-  @apply transition-all duration-200 ease-in
+  @apply transition-colors duration-200 ease-in
 }

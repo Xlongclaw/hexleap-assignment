@@ -11,6 +11,8 @@ interface PropsType {
   onPress: (pos: "left" | "right") => void; // Function to handle switch press events.
 }
 
+export type switchPositionType = "left" | "right";
+
 /**
  * Switch component representing a toggle switch.
  * @param width The width of the switch.
@@ -21,7 +23,7 @@ interface PropsType {
  */
 export default function Switch({ width = "md", firstIcon, secondIcon, onPress }: PropsType): JSX.Element {
   // State to manage the position of the switch.
-  const [switchPos, setSwitchPos] = React.useState<"left" | "right">("left");
+  const [switchPos, setSwitchPos] = React.useState<switchPositionType>("left");
 
   // Function to handle switch press events.
   const handleSwitchPress = () => {
@@ -38,7 +40,7 @@ export default function Switch({ width = "md", firstIcon, secondIcon, onPress }:
     <button
       onClick={handleSwitchPress}
       className={classNames(
-        "p-[6px] flex rounded-full shadow-md bg-white items-center justify-between relative",
+        "p-[6px] flex rounded-full shadow-md bg-white dark:bg-neutral-900 items-center justify-between relative",
         {
           "w-20": width === "sm",
           "w-24": width === "md",
@@ -49,7 +51,7 @@ export default function Switch({ width = "md", firstIcon, secondIcon, onPress }:
       {/* Switch track */}
       <div
         className={classNames(
-          "w-12 h-6 bg-neutral-900 flex items-center px-2 relative z-10",
+          "w-12 h-6 bg-neutral-900 dark:bg-neutral-100 flex items-center px-2 relative z-10 transition-transform duration-500",
           {
             "rounded-s-full rounded-e-[7000px]": switchPos === "left",
             "translate-x-6 rounded-s-[7000px] rounded-e-full": switchPos === "right" && width === "sm",
@@ -61,11 +63,11 @@ export default function Switch({ width = "md", firstIcon, secondIcon, onPress }:
         <div className="h-[2px] w-2 bg-teal-500 rounded-full"></div>
       </div>
       {/* Left icon */}
-      <div className={classNames("flex justify-center w-8")}>
+      <div className={classNames("flex justify-center w-8 dark:text-neutral-100 text-base")}>
         {firstIcon}
       </div>
       {/* Right icon */}
-      <div className="absolute left-[10px]">
+      <div className="absolute left-[10px] dark:text-neutral-100 text-base">
         {secondIcon}
       </div>
     </button>
