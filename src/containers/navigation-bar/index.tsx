@@ -12,8 +12,8 @@ const NavigationBar = () => {
     else theme?.changeTheme('light')
   }
   return (
-    <nav className='px-32 py-6 flex justify-between items-center'>
-      <h4 className='text-sm'><strong>HEXLEAP</strong> ASSIGNMENT</h4>
+    <nav className='px-32 py-4 flex justify-between items-center'>
+      <h4 className='text-sm'></h4>
       <Switch firstIcon={<BiSun/>} secondIcon={<BsMoonStarsFill/>} onPress={handleSwitchPress}/>
     </nav>
   )
