@@ -3,27 +3,19 @@ import Heading from "./heading";
 import SportsWrapper from "./sports-wrapper";
 import AdvertisementWrapper from "./advertisement-wrapper";
 import BlueButton from "./blue-button";
+import fetchSports from "./utils/fetchSports";
+import fetchAdvertisement from "./utils/fetchAdvertisement";
 
 export default function SportsContainer() {
-  const [sports, setSports] = React.useState<SportsType[]>();
-  const [advertisement, setAdvertisement] = React.useState<IAdvertisement>();
+  const [sports, setSports] = React.useState<SportsType[] | null>(null);
+  const [advertisement, setAdvertisement] = React.useState<IAdvertisement | null>(null);
 
   React.useEffect(() => {
-    const fetchSports = async () => {
-      const res = await fetch("/api/sports");
-      const data = await res.json();
-      setSports(data);
-    };
-    const fetchAdvertisement = async () => {
-      const res = await fetch("/api/advertisement");
-      const data = await res.json();
-      setAdvertisement(data);
-    };
-    fetchSports();
-    fetchAdvertisement();
+    fetchSports().then((data) => setSports(data));
+    fetchAdvertisement().then((data) => setAdvertisement(data));
   }, []);
 
-  if (sports && advertisement)
+  if (!sports) return <>Loading...</>
     return (
       <div className="w-[1200px] py-5 xl:px-0 md:px-12 px-4 flex flex-col items-center">
         <Heading title="Sports" />
@@ -31,9 +23,11 @@ export default function SportsContainer() {
           {sports.map((sport) => (
             <SportsWrapper key={sport._id} sport={sport} />
           ))}
-          <AdvertisementWrapper advertisement={advertisement} />
+          {advertisement && (
+            <AdvertisementWrapper advertisement={advertisement} />
+          )}
         </div>
-        <BlueButton title="See More" onClick={()=>{}}/>
+        <BlueButton title="See More" onClick={() => {}} />
       </div>
     );
 }
