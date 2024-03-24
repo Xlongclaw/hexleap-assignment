@@ -15,6 +15,14 @@ const config: Config = {
         md:'700px',
         sm:'450px',
         xs:'340px',
+      },
+      boxShadow:{
+        custom:'0px 4px 8px 0px #0000000D',
+        "inner-custom":'inset 0px 4px 8px 0px #0000000D'
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        
       }
     },
   },
