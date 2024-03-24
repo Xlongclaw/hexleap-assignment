@@ -7,6 +7,9 @@
     text-wrap: balance;
   }
 }
+html{
+  scroll-behavior: smooth;
+}
 
 *{
   @apply transition-colors duration-200 ease-in
