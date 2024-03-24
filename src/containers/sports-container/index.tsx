@@ -77,8 +77,8 @@ export default function SportsContainer(): JSX.Element {
           sports.map(
             (sport, i) =>
               i >= 4 && (
-                <div ref={scrollMoreRef}>
-                  <SportsWrapper key={sport._id} sport={sport} />
+                <div key={sport._id} ref={scrollMoreRef}>
+                  <SportsWrapper sport={sport} />
                 </div>
               )
           )}
