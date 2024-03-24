@@ -1,0 +1,2 @@
+export const HEADING = "Collection Spotlight"
+export const SUBHEADING = "Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today!"

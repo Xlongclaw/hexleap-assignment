@@ -71,7 +71,7 @@ export default function SportsContainer(): JSX.Element {
         )}
         {/* Render AdvertisementWrapper component if advertisement data is available */}
         {advertisement && (
-          <AdvertisementWrapper advertisement={advertisement} />
+          <AdvertisementWrapper key={advertisement.title} advertisement={advertisement} />
         )}
         {showMore &&
           sports.map(
