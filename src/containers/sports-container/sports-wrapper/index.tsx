@@ -10,7 +10,7 @@ export default function SportsWrapper({ sport }: { sport: SportsType }) {
     <motion.div
       variants={sportsWrapperVariants}
       style={{ boxShadow: "0px 4px 8px 0px #0000000D" }}
-      className="p-[10px] dark:bg-[#3B3E47] dark:text-white"
+      className="p-[10px] dark:bg-[#3B3E47] bg-white dark:text-white"
     >
       <ImageContainer image={sport.image} />
       <h3 className="font-medium my-2">{sport.title}</h3>

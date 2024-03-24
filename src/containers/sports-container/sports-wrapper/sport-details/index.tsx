@@ -7,7 +7,7 @@ interface PropsType {
 
 export default function SportDetails({sport,totalEvents}:PropsType) {
   return (
-    <div className="bg-[#eeeeee] dark:bg-[#292B32] flex p-2">
+    <div className="bg-[#F7F7F8] dark:bg-[#292B32] flex p-2">
         <div className="w-1/2">
           <h3 className="text-[12px] text-[#525965] dark:text-[#DFDFDF]">Total Events</h3>
           <h3 className="text-[14px] font-medium">

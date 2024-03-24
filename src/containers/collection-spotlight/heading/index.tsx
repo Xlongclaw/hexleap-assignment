@@ -18,7 +18,7 @@ export default function Heading({ title,subtitle }: PropsType) {
       >
         {title}
       </h3>
-      <h4 className="text-[14px] max-w-[55rem] mt-5">{subtitle}</h4>
+      <h4 className="text-[14px] max-w-[55rem] mt-5  dark:text-white text-center">{subtitle}</h4>
     </motion.div>
   );
 }

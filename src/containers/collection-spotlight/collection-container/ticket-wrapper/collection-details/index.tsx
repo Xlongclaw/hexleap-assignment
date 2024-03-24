@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TicketWrapper() {
+export default function CollectionDetails() {
   return (
     <div>
       

@@ -1,5 +1,6 @@
 const SPOTLIGHT = [
   {
+    _id:"78563489",
     title:"Las Vegas Aviators",
     address:"Las Vegas Ballpark, Las Vegas, Nevada",
     date:new Date('October 15, 2024 16:30:00'),
@@ -7,6 +8,7 @@ const SPOTLIGHT = [
     image:require('./images/a2c7e5def5b347470305864869a894b6.jpeg')
   },
   {
+    _id:"89563478",
     title:"Sacramento River Cats",
     address:"Sutter Health Park, Sacramento, California",
     date:new Date('October 15, 2024 16:30:00'),
@@ -14,6 +16,7 @@ const SPOTLIGHT = [
     image:require('./images/b6e3aeda879dc6f22f94711c788789b5.jpeg')
   },
   {
+    _id:"90674534",
     title:"Las Vegas Aviators",
     address:"Las Vegas Ballpark, Las Vegas, Nevada",
     date:new Date('October 15, 2024 16:30:00'),
