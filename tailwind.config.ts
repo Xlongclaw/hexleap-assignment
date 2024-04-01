@@ -13,6 +13,7 @@ const config: Config = {
         xl:'1250px',
         lg:'950px',
         md:'700px',
+        smd:'560px',
         sm:'450px',
         xs:'340px',
       },

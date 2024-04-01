@@ -54,7 +54,7 @@ export default function SportsContainer(): JSX.Element {
       initial="initial"
       animate="entry"
       ref={scrollRef}
-      className="w-[1200px] py-5 xl:px-0 md:px-12 px-4 flex flex-col items-center"
+      className="xl:w-[1200px] py-5 xl:px-0 md:px-12 px-4 flex flex-col items-center"
     >
       {/* Heading */}
       <Heading title="Sports" />
@@ -93,3 +93,5 @@ export default function SportsContainer(): JSX.Element {
     </motion.div>
   );
 }
+
+

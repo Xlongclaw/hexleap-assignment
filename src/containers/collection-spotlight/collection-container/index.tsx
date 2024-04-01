@@ -20,7 +20,7 @@ export default function CollectionContainer() {
   
   if (collections)
     return (
-      <div className="flex items-center px-16 gap-24">
+      <div className="flex items-center smd:px-[20%] md:px-16 gap-2 sm:gap-8 xl:gap-24 justify-center">
         <button
           onClick={() => {
             xPos <= -20 &&
@@ -29,15 +29,15 @@ export default function CollectionContainer() {
                   pos + refInner.current?.scrollWidth! / collections.length
               );
           }}
-          className="border-2 h-16 px-3 border-[#2C9CF0]"
+          className="border-2 h-12 xs:h-16 px-2 xs:px-3 border-[#2C9CF0]"
         >
           <SVGLeft />
         </button>
-        <div className="overflow-hidden ">
+        <div className="overflow-hidden w-[12.2rem] smd:w-auto">
           <div
             style={{ transform: `translateX(${xPos}px)` }}
             ref={refInner}
-            className="flex gap-8 py-16 transition-transform ease-out duration-500"
+            className="flex gap-[5%]  xl:gap-8 py-16 transition-transform ease-out duration-500"
           >
             {collections.map((collection) => (
               <TicketWrapper key={collection._id} collection={collection} />
@@ -55,7 +55,7 @@ export default function CollectionContainer() {
                   pos - refInner.current?.scrollWidth! / collections.length
               );
           }}
-          className="border-2 h-16 px-3 border-[#2C9CF0]"
+          className="border-2 h-12 xs:h-16 px-2 xs:px-3 border-[#2C9CF0]"
         >
           <SVGRight />
         </button>

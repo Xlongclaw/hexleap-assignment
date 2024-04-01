@@ -11,8 +11,8 @@ const poppins = Poppins({weight:'500',subsets:['latin']})
 export default function CollectionDetails({address,date,title}:IProps) {
   return (
     <div className='flex-col flex gap-2 dark:text-white'>
-      <h3 className={`font-medium text-[17px] text-center ${poppins.className}`}>{title}</h3>
-      <div className={`flex justify-center text-[14px] gap-2 ${poppins.className}`}>
+      <h3 className={`font-medium text-sm xl:text-[17px] text-center ${poppins.className}`}>{title}</h3>
+      <div className={`flex justify-center text-xs xl:text-[14px] gap-2 ${poppins.className}`}>
         <h4>OCT</h4>
         <div className='w-[1px] my-[5px] dark:bg-white bg-black'></div>
         <h4>SUN</h4>
