@@ -19,7 +19,7 @@ export const ThemeContext = React.createContext<IThemeContext | null>(null);
  * @param props PropTypes object containing the children components.
  * @returns JSX element wrapping the children components with theme context.
  */
-export default function ThemeProvider({ children }: PropTypes): JSX.Element {
+export default function ThemeProvider({ children }: PropTypes): React.JSX.Element {
   // State to manage the current theme.
   const [theme, setTheme] = React.useState<ThemeType>("light");
 
