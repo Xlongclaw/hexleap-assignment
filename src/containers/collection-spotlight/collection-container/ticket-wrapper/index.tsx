@@ -20,7 +20,7 @@ export default function TicketWrapper(props: PropsType): React.JSX.Element {
   return (
     <div className="p-[15px] shadow-custom flex flex-col gap-3 bg-white dark:bg-[#3B3E47] flex-shrink-0 w-[100%] md:w-[45.6%] lg:w-[30%]">
       {/* Render collection image */}
-      <Image src={props.collection.image} alt="" />
+      <Image className='shadow-xl' src={props.collection.image} alt="" />
       <div className="flex items-center gap-4">
         {/* Left dot */}
         <div className="dark:bg-[#1f1e2b] bg-[#f5f9ff] w-7 h-7 rounded-full border-r dark:border-r-0 ml-[-28px]"></div>
