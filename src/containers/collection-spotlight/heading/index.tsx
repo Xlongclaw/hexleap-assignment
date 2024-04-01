@@ -1,15 +1,24 @@
-import React from "react";
-import { Poppins } from "next/font/google";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Poppins } from 'next/font/google'; 
+import { motion } from 'framer-motion'; 
 
+/**
+ * Props for the Heading component.
+ */
 interface PropsType {
-  title: string;
-  subtitle: string;
+  title: string; // The main title
+  subtitle: string; // The subtitle
 }
 
-const poppins = Poppins({ weight: "700", subsets: ["latin"] });
+// Define Poppins font options
+const poppins = Poppins({ weight: '700', subsets: ['latin'] });
 
-export default function Heading({ title, subtitle }: PropsType) {
+/**
+ * Heading component displays a title and a subtitle.
+ * @param props - The props object containing title and subtitle.
+ * @returns - The rendered component.
+ */
+const Heading: React.FC<PropsType> = ({ title, subtitle }: PropsType) => {
   return (
     <motion.div className="flex flex-col justify-center items-center">
       <h3
@@ -22,4 +31,6 @@ export default function Heading({ title, subtitle }: PropsType) {
       </h4>
     </motion.div>
   );
-}
+};
+
+export default Heading;

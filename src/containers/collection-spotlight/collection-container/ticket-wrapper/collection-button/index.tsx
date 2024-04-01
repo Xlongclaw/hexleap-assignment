@@ -1,13 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-interface IProps {
-  title:string
+/**
+ * Props for the CollectionButton component.
+ */
+interface PropsType {
+  title: string;
 }
 
-export default function CollectionButton({title}:IProps) {
+/**
+ * CollectionButton component renders a button for a collection.
+ * @component
+ * @param props - The props of the component.
+ * @returns React.JSX.Element - The rendered component.
+ */
+export default function CollectionButton({ title }: PropsType): React.JSX.Element {
   return (
     <h3 className='bg-[#1D1D1F] text-white p-3 text-[13px] font-medium text-center'>
       {title} Collection
     </h3>
-  )
+  );
 }
