@@ -1,5 +1,6 @@
 # Hexleap Frontend Assignment
 [Vercel deploy link](https://hexleap-assignment-ew95gkjhn-xlongclaws-projects.vercel.app/)
+
  I have developed this assignment in order to get selected as an intern in **Hexleap**. It presents two components -> sports container and a collection spotlight section. A switch is also provided to select between night and dark mode.
 
 ## Tech Stack
@@ -16,9 +17,11 @@
 
 ###### Sports Component
 - Responsive up to 220px.
+- `See More Button Working.`
+
 ###### Collection Spotlight Component
 - Responsive up to 275px.
-
+- `Sliders Button Working.`
 ## Project Images
 
 ![Sports Container Dark](https://res.cloudinary.com/dlxpf7d8c/image/upload/v1711975414/sclevjwd9z2ubiyxuotk.png )
