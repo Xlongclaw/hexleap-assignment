@@ -62,11 +62,11 @@ export default function Switch({ width = "md", firstIcon, secondIcon, onPress }:
       >
         <div className="h-[2px] w-2 bg-teal-500 rounded-full"></div>
       </div>
-      {/* Left icon */}
+      {/* First icon */}
       <div className={classNames("flex justify-center w-8 dark:text-neutral-100 text-base")}>
         {firstIcon}
       </div>
-      {/* Right icon */}
+      {/* Second icon */}
       <div className="absolute left-[10px] dark:text-neutral-100 text-base">
         {secondIcon}
       </div>
